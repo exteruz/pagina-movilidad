@@ -1,0 +1,296 @@
+*{
+    font-family: 'Roboto Mono', monospace;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: #e3e3e3;
+}
+
+#map-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #455d7a;
+    
+    
+
+}
+#image-map{
+    height: 90vh;
+    width: 100%;
+    box-shadow: 10px 10px  #f95959;
+}
+#image-map-container{
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+   
+    
+    
+}
+#titulo-mapa{
+    background-color: #f95959;
+    padding: 5%;
+    padding-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+#titulo-mapa-h1{
+    color: #e3e3e3;
+    text-shadow: 2px 2px 4px #000000;
+}
+#container-title{
+    background-image: url(https://arquitectura.medellin.unal.edu.co/salau/images/2019/Grado/vsig_images/IMG_9482_790_526_90.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 100%;
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    
+}
+
+nav{
+    width: 100%;
+}
+#ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    list-style: none;
+    
+}
+h1{
+    font-size: 50px;
+    padding-bottom: 5%;
+    font-weight: 1px;
+
+
+}
+
+.timeline{
+    max-width: 1500px;
+    height: 220vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://universidadesyprofesiones.com/images/universidades/campus/universidad-nacional-de-colombia-banner.jpg)
+} 
+
+
+
+
+
+
+.container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+   
+}
+
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 1s;
+}
+.container:nth-child(3){
+    animation-delay: 2s;
+}
+.container:nth-child(4){
+    animation-delay: 3s;
+}
+.container:nth-child(5){
+    animation-delay: 4s;
+}
+.container:nth-child(6){
+    animation-delay: 5s;
+}
+
+
+
+
+
+
+.titulo{
+    color: #e3e3e3;
+    margin-left: 5%;
+}
+.content{
+    padding: 20px 30px;
+    background-color:  #455d7a;
+    margin-top: 2% ;
+    position: relative;
+    font-size: 15px;
+    display: flex;
+    color: #e3e3e3;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px -10px  #f95959;
+    border-radius: 5px;
+}
+.left{
+    left: 0;
+    
+}
+.right{
+    left: 50%;
+}
+.container img{
+    position: absolute;
+    width: 65px;
+    border: 5px solid #455d7a;
+
+
+   border-radius: 50%;
+   right: -40px;
+   margin: -2%; 
+    top: 32px;
+    z-index: 10;
+}
+
+
+
+
+
+.right img{
+    left: -20px;
+}
+
+
+.left-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid  #f95959;
+    right: -15px;
+    
+
+}
+.left-right{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid   #f95959;
+    left: -15px;
+
+}
+
+
+
+@media screen and (max-width: 600px){
+     
+    #ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+  
+   
+  
+    
+ 
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .content{
+        font-size: 13px;
+    }
+    .right{
+        left: 0;
+    }
+    .left img, .right img {
+        left: 10px;
+
+    }
+    .left-arrow, .left-right{
+        border-right:  15px solid gray;
+        border-left: 0;
+        left: -15px;
+    }
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
